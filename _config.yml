@@ -1,0 +1,15 @@
+css:
+    - /static/css/style.css
+
+js:
+
+#
+# Build options
+#
+
+include:        ["robots.txt"]
+exclude:        ["_doc", "LICENSE", "README.md", "_sources"]
+markdown:       kramdown
+sass:
+    sass_dir:   _sass
+    style:      compressed

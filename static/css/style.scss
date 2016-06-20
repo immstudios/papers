@@ -1,0 +1,121 @@
+---
+---
+
+@page {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open sans';
+    font-size: 0.8em;
+}
+
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+
+    padding-left: 25mm;
+    padding-right: 25mm;
+    padding-top: 20mm;
+    padding-bottom:40mm;
+}
+
+/** Paper sizes **/
+body.A3           .sheet { width: 297mm; height: 419mm }
+body.A3.landscape .sheet { width: 420mm; height: 296mm }
+body.A4           .sheet { width: 210mm; height: 296mm }
+body.A4.landscape .sheet { width: 297mm; height: 209mm }
+body.A5           .sheet { width: 148mm; height: 209mm }
+body.A5.landscape .sheet { width: 210mm; height: 147mm }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+    body {
+        background: #e0e0e0
+    }
+
+    .sheet {
+        background: white;
+        box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+        margin: 0 auto;
+        margin-top: 10mm;
+    }
+}
+
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+           body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+}
+
+
+h1 {
+    font-family : 'Dosis';
+    font-size : 1.5em;
+    margin-bottom : 2em;
+}
+
+h2 {
+    font-family : 'Dosis';
+    font-size : 1.2em;
+    margin-top : 1.5em;
+}
+
+
+
+code {
+    display: block;
+    margin-top : 8em;
+    margin-bottom : 2em;
+    font-family : 'Dosis';
+    font-weight: 500;
+}
+
+p {
+    text-align: justify;
+}
+
+header {
+    position: absolute;
+
+    img {
+        width : 60%;
+        height: auto;
+    }
+}
+
+
+footer {
+    color: #646464;
+    position: absolute;
+    height:20mm;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align: center;
+
+
+    .divider {
+        display: inline-block;
+        width: 3em;
+    }
+
+    .fa-sm {
+        margin-top: -.1em;
+        font-size:0.65em;
+    }
+
+}
