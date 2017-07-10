@@ -32,16 +32,14 @@ body.A4.landscape .sheet { width: 297mm; height: 209mm }
 body.A5           .sheet { width: 148mm; height: 209mm }
 body.A5.landscape .sheet { width: 210mm; height: 147mm }
 
-/** Padding area **/
 .sheet.padding-10mm { padding: 10mm }
 .sheet.padding-15mm { padding: 15mm }
 .sheet.padding-20mm { padding: 20mm }
 .sheet.padding-25mm { padding: 25mm }
 
-/** For screen preview **/
 @media screen {
     body {
-        background: #e0e0e0
+        background: #e0e0e0;
     }
 
     .sheet {
@@ -52,8 +50,6 @@ body.A5.landscape .sheet { width: 210mm; height: 147mm }
     }
 }
 
-
-/** Fix for Chrome issue #273306 **/
 @media print {
            body.A3.landscape { width: 420mm }
   body.A3, body.A4.landscape { width: 297mm }
@@ -75,14 +71,11 @@ h2 {
 }
 
 
-
-code {
-    display: block;
-    margin-top : 8em;
-    margin-bottom : 2em;
-    font-family : 'Dosis';
-    font-weight: 500;
+table{
+    width: 100%;
 }
+
+
 
 p {
     text-align: justify;
@@ -107,7 +100,6 @@ footer {
     right:0;
     text-align: center;
 
-
     .divider {
         display: inline-block;
         width: 3em;
@@ -118,4 +110,9 @@ footer {
         font-size:0.65em;
     }
 
+}
+
+
+pre {
+    margin-top: 9em;
 }
